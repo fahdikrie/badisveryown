@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Rubik|Rubik+Mono+One&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/a5686a1bdd.js" crossorigin="anonymous"></script>
+    <script src="{% static '/index.js'  %}"></script>
+
+    <link rel="shortcut icon" href="{% static 'images/favicon-moon.png' %}" type="image/x-icon">
+    <title>home | badi's very own website</title>
+</head>
+
+<body>
+
+    <div id="fullpage">
+
+        <div class="section active">
+
+                <!-- Title Page -->
+                <section id="title-page">
+    
+                    <div class="container-fluid">
+    
+                        <!-- Space Objects -->
+                        <img class="bulan" src="{% static 'images/bulan.png' %}" alt="bulan">
+
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="title-box col-lg-12">
+                                    <h1 class="animated fadeIn delay-1s slower">BADI</h1>
+                                    <h4 class="animated fadeIn delay-2s fast">an internet-web facade of Fahdii Ajmalal Fikrie</h4>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+    
+                </section>
+    
+        </div>
+        
+
+
+        <div class="section">
+
+                <!-- About Page -->
+                <section id="about-page">
+                    <img class="book-silhouette" src="{% static 'images/bbw-footer.jpg' %}" alt="book-silhouette">
+
+                    <div class="about-card container text-center">
+                    
+                        <div class="row">
+                            <div class="about-desc col-md-3 col-sm-12">
+                                <img class="profile-picture" src="{% static 'images/profile_picture.jpg' %}" alt="pp">
+                            </div>
+
+                            <div class="about-desc description col-md-9 col-sm-12">
+                                <h3>brief <u>description</u> about badi</h3>
+                                <p>Fahdii is a 19yo currently majoring Computer Science at the University of Indonesia <br>
+                                He is very passionate when it comes to taking nap and listening to music <br>
+                                oh, and he also loves spending his time watching movies <br>
+                                especially the thriller/mystery ones</p>
+                            </div>
+                        </div>
+                    
+                            <button type="button" class="btn btn1 btn-outline-warning animated fadeInLeft delay-3s slower">
+                                <i class="fas fa-moon fa-1x" style="float: left;"></i>
+                                <a href="/blog" style="text-decoration: none;"><h5>see my <br> web-log!</h5> </a>
+                            </button>
+
+                            <button type="button" class="btn btn2 btn-outline-warning animated fadeInRight delay-3s slower">
+                                <i class="far fa-moon fa-1x" style="float: left;"></i>
+                                <a href="https://drive.google.com/file/d/1OU3FW9TYOq70LjPKP1rqNOPta4xeLwjA/view?usp=sharing" target="_blank" style="text-decoration: none;"><h5>download <br> my resume</h5></a>
+                            </button>
+                    </div>
+
+                </section>
+
+        </div>
+
+        <div class="section">
+
+            <!-- Portfolio Page -->
+            <section id="portfolio-page">
+                
+                <div class="portfolio-page container-fluid">
+                    <div class="row">
+                        <div class="portfolio-desc col-md-6 text-center animated zoomIn delay-4s slower">
+                            <h3>a very humbled <u>portfolio</u>, so to speak</h3>
+                            <p>it is, perhaps, far as flashy as any experienced webdevs' portfolio, <br>
+                            thus the title <em>very humbled</em> came in. but be sure to hang tight! <br>
+                            because more awesome things are surely coming 😉</p>
+                            
+                            <!-- But as a freshman in CS, and someone who puts a great deal <br>
+                            of interest in web programming, i'm gonna strive for any chance, <br>
+                            whether it is to join a project, or enrolling in IT-related <br>
+                            student board in order for me to grow 😉</p> -->
+
+                            <!-- <p>
+                            wack right? i knooow, thats why this is the very part <br>
+                            for any of you who interested in hiring and/or <br>
+                            doing projects with me to help me grow 😉
+                            </p> -->
+                        </div>
+
+                        <div class="portfolio-images col-md-6 text-center">
+                            <div class="portfolio-box">
+                                <a href="https://badisveryfirst.netlify.com" target="_blank">
+                                    <img class="portfolio-image" src="{% static 'images/portfolio1.png' %}" alt="badisveryfirst">
+                                </a>
+                                <br>
+                                <p class="portfolio-image-captions">my very first personal webpage, made as the submission <br>
+                                for BEM PTI and FUKI ITF internship assignment</p>
+                            </div>
+                            
+                            <div class="portfolio-box">
+                                <a href="https://budayakblite-badi.herokuapp.com" target="_blank">
+                                    <img class="portfolio-image" src="{% static 'images/portfolio2.png' %}" alt="budayakblite-badi">
+                                </a>
+                                <br>
+                                <p class="portfolio-image-captions">my submission for the 4th programming assigment (TP4) of <br>
+                                the subject DDP1, uses flask and simple bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+
+        <div class="section fp-auto-height">
+
+                <!-- Resume Page -->
+                <section id="resume-page">
+                    <div class="container text-center">
+                        <!-- <h3>help a brother in need!</h3> -->
+                        <h3 class="resume-title animated bounceIn delay-5s slower">you know, the <u>credentials</u> and stuff</h3>
+
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="slider carousel-inner">
+
+                              <div class="carousel-item active">
+                                
+                                <div class="container row">
+                                    
+                                    <div class="slider-items card col-sm-6" style="background-color: #222222;">
+                                        <img class="resume-image card-img-top" src="{% static 'images/favicon-moon.png' %}" alt="bulan">
+                                    </div>
+
+                                    <div class="slider-items card col-sm-6" style="background-color: black;">
+                                        <div class="resume-desc">
+                                            <br>
+                                            <h5>FULL NAME</h5>
+                                            <p>Fahdii Ajmalal Fikrie</p> <br> <br>
+                                            <h5>STUDENT ID NUMBER</h5>
+                                            <p>1906398370</p> <br> <br>
+                                            <h5>MAJOR/PROGRAM</h5>
+                                            <p>Computer Science</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                              </div>
+
+                              <div class="carousel-item">
+                                                                
+                                <div class="container row">
+                                    
+                                    <div class="slider-items card col-sm-6" style="background-color: #222222;">
+                                        <img class="resume-image resume-image3 card-img-top" src="{% static 'images/favicon-moon2.png' %}" alt="bulan">
+                                    </div>
+
+                                    <div class="slider-items card col-sm-6" style="background-color: black;">
+                                        <div class="resume-desc">
+                                            <br>
+                                            <h5>HOBBIES</h5>
+                                            <p>sleeping and watching movies</p> <br> <br>
+                                            <h5>INTERESTS</h5>
+                                            <p>web programming and data analytics</p> <br> <br>
+                                            <h5>FUTURE EXPECTATIONS</h5>
+                                            <p>i aspire to be on the same level with the tokis</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                              </div>
+
+                              <div class="carousel-item">
+                                                                
+                                <div class="container row">
+                                    
+                                    <div class="slider-items card col-sm-6" style="background-color: #222222;">
+                                        <img class="resume-image card-img-top" src="{% static 'images/favicon-moon3.png' %}" alt="bulan">
+                                    </div>
+
+                                    <div class="slider-items card col-sm-6" style="background-color: black;">
+                                        <div class="resume-desc">
+                                            <h3>EDUCATION</h3>
+                                            <span style="text-align: left;">
+                                                <h5 class="resume-education">Computer Science, <br> University of Indonesia</h5>
+                                                <p>2019  –  now</p>
+                                            </span>
+
+                                            <span style="text-align: right;">
+                                                <h5 class="resume-education">Civil Engineering, <br> University of Indonesia</h5>
+                                                <p>2018  –  2019</p>
+                                            </span>
+
+                                            <span style="text-align: left;">
+                                                <h5 class="resume-education">State Senior High School <br> SMAN 2 Depok</h5>
+                                                <p>2015  –  2018</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+                    
+                    </div>
+                </section>
+
+                <!-- Contacts Page -->
+                <section id="contacts-page-headline">
+                    <div class="container text-center">
+                        <h3><u>get to know</u> more about me</h3>
+                    </div>
+                </section>
+
+        </div>
+    
+
+
+        <div class="section fp-auto-height">
+
+                <!-- Contacts Page -->
+                <section id="contacts-page">
+                    <div class="container contacts-container text-center">
+                        <!-- <h3>get to know more about me</h3> -->
+
+                        <div class="contacts-icons row">
+                            <div class="col-3">
+                                <a class="contacts-icon" href="http://www.twitter.com/fahdikrie" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square fa-4x"></i></a>
+                            </div>
+                            
+                            <div class="col-3">
+                                <a class="contacts-icon" href="https://www.linkedin.com/in/fahdi-a-9b9474123/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in fa-4x"></i></a>
+                            </div>
+
+                            <div class="col-3">
+                                <a class="contacts-icon" href="https://www.gitlab.com/fahdikrie" target="_blank" rel="noopener noreferrer"><i class="fab fa-gitlab fa-4x"></i></a>
+                            </div>
+
+                            <div class="col-3">
+                                <a class="contacts-icon" href="http://github.com/fahdikrie" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square fa-4x"></i></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <section id="footer-page">
+                    <div class="container text-center">
+                        <h4><i class="fa fa-copyright fa-sm" aria-hidden="true"></i> badisveryown | 2020</h4>
+                    </div>
+                </section>
+                <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+    <!-- <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> -->
+
+</body>
+
+    <script>
+        new fullpage('#fullpage', {
+            //options here
+            autoScrolling:true,
+            scrollHorizontally: true,
+            navigation: true,
+            slidesNavPosition: "yellow"
+        });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

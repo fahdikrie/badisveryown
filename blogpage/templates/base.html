@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/blog.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Rubik|Rubik+Mono+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a5686a1bdd.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="{% static 'images/favicon-moon.png' %}" type="image/x-icon">
+    <title>blog | badi's very own blogpage</title>
+</head>
+<body>
+
+    <nav>
+        <nav class="navbar container">
+            <a class="navbar-brand" href="{% url 'index' %}"><h1>BADI.</h1></a>
+
+            <div class="nav-item">
+                <a href="/blog"><i class="fas fa-globe-africa fa-2x" style="color: yellow;"></i></a>
+            </div>
+        </nav>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </div>
+    
+</body>
+</html>
+

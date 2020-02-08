@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: yellow;
+}
+
+.navbar {
+    padding: 1%;
+    font-family: 'Rubik Black';
+    color: yellow!important;
+}
+
+h1 {
+    color: yellow;
+}
+
+h1:hover {
+    color: gold;
+}
+
+.navbar-brand:hover {
+    color: gold;
+}
+
+.nav-item:hover {
+    color: gold;
+}
+
+.fas.fa-home.fa-3x:hover {
+    color: gold;
+}
+
+.card {
+    background-color: black;
+    border: 2px solid;
+    border-color: yellow;
+    border-radius: 10px;
+    margin: 5% 7%;
+}

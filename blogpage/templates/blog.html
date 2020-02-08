@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<div class="container">
+    <!-- Blog Entries Column -->
+    {% for post in post_list %}
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.author }} | {{ post.created_on}} </p>
+            <p class="card-text">{{post.content|slice:":200" }}</p>
+            <a href="{% url 'singlepost' post.slug  %}" class="btn btn-dark"><strong style="color: yellow;">Read More</strong></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{%endblock%}
