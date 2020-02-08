@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card-body">
+    {% if new_comment %}
+    <div class="alert alert-success" role="alert">
+      <strong>your comment is succesfully posted!</strong> please wait for the admin's moderation
+    </div>
+    {% else %}
+    <form method="POST" style="padding: 25%;">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <button type="submit" class="btn btn-outline-warning mt-3">Submit</button>
+    </form>
+    {% endif %}
+  </div>
+
+  <div class="">
+    {% for comment in comments %}
+    <div class="comments" style="padding: 10px;">
+      <p class="font-weight-bold">
+        {{ comment.name }}
+        <span class=" text-muted font-weight-normal">
+          {{ comment.created_on }}
+        </span>
+      </p>
+      {{ comment.body | linebreaks }}
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock content %}

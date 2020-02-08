@@ -3,67 +3,105 @@
 {% load static %}
 <link rel="stylesheet" href="{% static '/singlepost.css' %}">
 
+<style>
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+body {
+  background-color: black;  
+} 
+
+.container {
+  background-color: black;
+}
+
+.card {
+  background-color: black;
+  margin: 0% 7% 7% 5%;
+}
+
+.postingannya {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: gold;
+  width: 63vw;
+  padding: 5% 5% 15%;
+}
+
+.content {
+  padding: 10% 5% 5%;
+}
+
+.button {
+  color: yellow;
+  background-color: #333333;
+
+  width: 50vw;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+
+  font-weight: bolder;
+}
+
+.button:hover {
+  background-color: #222222;
+}
+
+</style>
+
 <div class="container">
     <div class="card">
+      <div class="postingannya card-body my-5">
+        <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+        <p class="card-text">{{ post.author }} <span class="text-muted">{{ post.created_on }}</span></p>
+        <p class="card-text content" style="font-size: large;">{{ post.content | safe }}</p>
+      </div>
+    
       <div class="card-body">
-        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-        <p class="card-text">{{ post.author }} | {{ post.created_on }}</p>
-        <p class="card-text ">{{ object.content | safe }}</p>
+        <h4>all replies:</h4> <br>
+        
+        {% for comment in comments %}
+        <div class="comments" style="padding: 10px;">
+          <p class="font-weight-bold">
+            {{ comment.name }}
+            <span class=" text-muted font-weight-normal">
+              {{ comment.created_on }}
+            </span>
+          </p>
+          {{ comment.body | linebreaks }}
+        </div>
+        {% endfor %}
       </div>
 
+      <br><br><br>
+
       <div class="card-body">
+        <h4>leave a reply!</h4>
         {% if new_comment %}
         <div class="alert alert-success" role="alert">
           <strong>your comment is succesfully posted!</strong> please wait for the admin's moderation
         </div>
         {% else %}
-        <form method="POST" style="padding: 25%;">
-          {% csrf_token %}
-          {{ comment_form.as_p }}
-          <button type="submit" class="btn btn-outline-warning mt-3">Submit</button>
-        </form>
-        {% endif %}
-      </div>
-    </div>
-</div>
-<!-- 
-    <div class="">
-      <div class="card-body">
-        {% if new_comment %}
-        <div class="alert alert-success" role="alert">
-          Your comment is awaiting moderation
-        </div>
-        {% else %}
-        <h3>Leave a comment</h3>
-        <form method="post" style="margin-top: 1.3em;">
-          {{ comment_form.as_p }}
-          {% csrf_token %}
-          <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-        </form>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-
-    <div class="card">
-      <div class="card-body">
-
-          <h2>{{ comments.count }} comments section</h2>
-      
-          {% for comment in comments %}
-          <div class="comments" style="padding: 10px;">
-            <p class="font-weight-bold">
-              {{ comment.name }}
-              <span class=" text-muted font-weight-normal">
-                {{ comment.created_on }}
-              </span>
-            </p>
-            {{ comment.body | linebreaks }}
+        <form method="POST" style="padding: 3% 10%;">
+          <div class="form-group">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
           </div>
-          {% endfor %}
+          <button type="submit" class="button mt-3">Submit</button>
+        </form>
+        {% endif %}
       </div>
-    </div> -->
-
+</div>
 
 
 {% endblock content %}
