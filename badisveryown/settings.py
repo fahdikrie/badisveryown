@@ -76,13 +76,24 @@ WSGI_APPLICATION = 'badisveryown.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),    
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),    
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'df1p57d2n2ap5t',
+        'USER': 'novstpinrtvcfn',
+        'PASSWORD': 'd78926fc43f792beb0c5f5eacabbd4ebbc6e146927d53d96892bbf3541b7f737',
+        'HOST': 'ec2-184-72-235-80.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
